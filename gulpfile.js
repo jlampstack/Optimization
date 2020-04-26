@@ -1,15 +1,19 @@
-// step one
-// var gulp = require('gulp');
+/**
+ * Step 1
+ * 
+ * Tells gulp where our CSS file is and processing it to a dist directory.
+ */
+var gulp = require('gulp');
 
-// gulp.task('process-css', function() {
-//   return gulp.src('./styles/*.css')
-//     .pipe(gulp.dest('./dist'));
-// });
+gulp.task('process-css', function() {
+  return gulp.src('./styles/*.css')
+    .pipe(gulp.dest('./dist'));
+});
 
-// gulp.task('default', ['process-css']);
+gulp.task('default', ['process-css']);
 
 
-// step 2
+// Step 2
 // var gulp = require('gulp');
 // var postcss = require('gulp-postcss');
 // var autoprefixer = require('autoprefixer');
@@ -27,7 +31,7 @@
 
 // gulp.task('default', ['process-css']);
 
-// step 3
+// Step 3
 // var gulp = require('gulp');
 // var postcss = require('gulp-postcss');
 // var autoprefixer = require('autoprefixer');
@@ -47,7 +51,7 @@
 
 // gulp.task('default', ['process-css']);
 
-// step 4
+// Step 4
 // var gulp = require('gulp');
 // var postcss = require('gulp-postcss');
 // var autoprefixer = require('autoprefixer');
@@ -71,7 +75,7 @@
 
 // gulp.task('default', ['process-css']);
 
-// step 5
+// Step 5
 // var gulp = require('gulp');
 // var postcss = require('gulp-postcss');
 // var autoprefixer = require('autoprefixer');
@@ -100,40 +104,40 @@
 
 // gulp.task('default', ['process-css']);
 
-// step 6
-var gulp = require('gulp');
-var postcss = require('gulp-postcss');
-var autoprefixer = require('autoprefixer');
-var postcssZindex = require('postcss-zindex');
-var concat = require('gulp-concat');
-var cleanCSS = require('gulp-clean-css');
-var inlinesource = require('gulp-inline-source');
-var wait = require('gulp-wait');
+// Step 6
+// var gulp = require('gulp');
+// var postcss = require('gulp-postcss');
+// var autoprefixer = require('autoprefixer');
+// var postcssZindex = require('postcss-zindex');
+// var concat = require('gulp-concat');
+// var cleanCSS = require('gulp-clean-css');
+// var inlinesource = require('gulp-inline-source');
+// var wait = require('gulp-wait');
 
-gulp.task('process-css', function() {
-  var plugins = [
-    autoprefixer({
-      browsers: ['last 3 version']
-    }),
-    postcssZindex({startIndex: 1})
-  ];
-  return gulp.src('./styles/*.css')
-    .pipe(postcss(plugins))
-    .pipe(cleanCSS({
-      level: {
-        1: {},
-        2: {}
-      }
-    }))
-    .pipe(concat('prod.min.css'))
-    .pipe(gulp.dest('./dist'));
-});
+// gulp.task('process-css', function() {
+//   var plugins = [
+//     autoprefixer({
+//       browsers: ['last 3 version']
+//     }),
+//     postcssZindex({startIndex: 1})
+//   ];
+//   return gulp.src('./styles/*.css')
+//     .pipe(postcss(plugins))
+//     .pipe(cleanCSS({
+//       level: {
+//         1: {},
+//         2: {}
+//       }
+//     }))
+//     .pipe(concat('prod.min.css'))
+//     .pipe(gulp.dest('./dist'));
+// });
 
-gulp.task('inlinesource', function () {
-    return gulp.src('*.html')
-        .pipe(wait(100))
-        .pipe(inlinesource())
-        .pipe(gulp.dest('./dist'));
-});
+// gulp.task('inlinesource', function () {
+//     return gulp.src('*.html')
+//         .pipe(wait(100))
+//         .pipe(inlinesource())
+//         .pipe(gulp.dest('./dist'));
+// });
 
-gulp.task('default', ['process-css', 'inlinesource']);
+// gulp.task('default', ['process-css', 'inlinesource']);
