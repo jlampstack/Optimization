@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>This is some lazy loading bro!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style type="text/css">
+    html,
+    body {
+      margin: 0;
+    }
+    img {
+        width: 100%;
+        height: 100vh;
+        display: block;
+    }
+
+    img:not([src]) {
+        visibility: hidden;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <img data-original="/images/1.jpg" width="414" height="736">
+  </div>
+  <div>
+    <img data-original="/images/2.jpg" width="414" height="736">
+  </div>
+  <div>
+    <img data-original="/images/3.jpg" width="414" height="736">
+  </div>
+  <div>
+    <img data-original="/images/4.jpg" width="414" height="736">
+  </div>
+  <div>
+    <img data-original="/images/5.jpg" width="414" height="736">
+  </div>
+  <div>
+    <img data-original="/images/6.jpg" width="414" height="736">
+  </div>
+  <div>
+    <img data-original="/images/7.jpg" width="414" height="736">
+  </div>
+  <div>
+    <img data-original="/images/8.jpg" width="414" height="736">
+  </div>
+  <div>
+    <img data-original="/images/9.jpg" width="414" height="736">
+  </div>
+  <div>
+    <img data-original="/images/10.jpg" width="414" height="736">
+  </div>
+  <div>
+    <img data-original="/images/11.jpg" width="414" height="736">
+  </div>
+  <div>
+    <img data-original="/images/12.jpg" width="414" height="736">
+  </div>
+  <div>
+    <img data-original="/images/13.jpg" width="414" height="736">
+  </div>
+  <div>
+    <img data-original="/images/14.jpg" width="414" height="736">
+  </div>
+  <div>
+    <img data-original="/images/15.jpg" width="414" height="736">
+  </div>
+  <div>
+    <img data-original="/images/16.jpg" width="414" height="736">
+  </div>
+  <div>
+    <img data-original="/images/17.jpg" width="414" height="736">
+  </div>
+  <div>
+    <img data-original="/images/18.jpg" width="414" height="736">
+  </div>
+  <div>
+    <img data-original="/images/19.jpg" width="414" height="736">
+  </div>
+  <div>
+    <img data-original="/images/20.jpg" width="414" height="736">
+  </div>
+
+  <script src="/js/lazyload.min.js"></script>
+  <script>
+    var myLazyLoad = new LazyLoad({
+        threshold: 1472,
+    });
+
+    //new LazyLoad();
+  </script>
+
+</body>
+</html>

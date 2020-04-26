@@ -1,0 +1,21 @@
+{
+  "name": "video_01",
+  "version": "1.0.0",
+  "description": "course example",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dale.sande@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.7.6",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.0.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-inline-source": "^3.0.0",
+    "gulp-postcss": "^6.3.0",
+    "gulp-wait": "0.0.2",
+    "postcss-zindex": "^2.2.0"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "tinypng",
+  "version": "1.0.0",
+  "description": "tiny png api",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dale.sande@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-tinypng": "^1.0.2"
+  }
+}
